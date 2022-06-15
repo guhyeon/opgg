@@ -1,17 +1,25 @@
 import { action, observable, makeObservable, isObservableMap, isObservableSet } from "mobx";
+import MatchesStore from "./MatchesStore";
 import UserBasicInfoStore from "./UserBasicInfoStore";
+import  WinRateStore  from "./WinRateStore";
 
 
 export default class RootStore{
 
 
+
 // testStore : TestStore;
 userBasicInfoStore : UserBasicInfoStore;
+winRateStore : WinRateStore;
+matchesStore : MatchesStore;
+
 
 constructor() {
 
 // this.testStore = new testStore(this);
 this.userBasicInfoStore = new UserBasicInfoStore(this);
+this.winRateStore = new WinRateStore(this);
+this.matchesStore = new MatchesStore(this);
 
 
 }

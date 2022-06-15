@@ -17,10 +17,10 @@ const HeaderContentsComponent = observer(() => {
 
             }
             {/* todo img 알맞게 보여주기 */}
-            {/* <div><img src={store.summonerDTO?.summoner?.profileBorderImageUrl} alt={''}  />
+            <div><img src={store.summonerDTO?.summoner?.profileBorderImageUrl} alt={''}  />
             <img src={store.summonerDTO?.summoner?.profileBackgroundImageUrl} alt={''}  />
             {store.summonerDTO?.summoner?.level}
-            </div> */}
+            </div>
 
 
             <div>{store.summonerDTO?.summoner?.name}</div>

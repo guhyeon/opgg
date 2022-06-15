@@ -1,6 +1,9 @@
 import React, { FC, ReactNode } from 'react';
 import HeaderComponent from '../components/header/HeaderComponent';
 import HeaderContentsComponent from '../components/headerContents/HeaderContentsComponent';
+import RankComponent from '../components/leagues/RankComponent';
+import MatchesStatusComponent from '../components/matches/MatchesStatusComponent';
+import WinRateComponent from '../components/winRate/WinRateComponent';
 import style from './layout.module.css'
 
 
@@ -21,13 +24,16 @@ const Layout:FC<LayoutProps> = ({ children}) => {
   return (
  
    
-    <div className={style.SummonerDetailFronttest} > 
-    <body>
+    <div> 
+  
     <HeaderComponent/>
     <HeaderContentsComponent/>
+    <RankComponent/>
+    <WinRateComponent/>
+    <MatchesStatusComponent/>
     
       {children}
-    </body>
+   
     </div>
   
   );

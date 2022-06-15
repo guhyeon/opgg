@@ -11,7 +11,7 @@ import style from './InputTextButton.module.css'
  */
 const InputTextButton = observer(() => {
     
-    const {userBasicInfoStore : store} = useStore();
+    const {userBasicInfoStore : store , winRateStore : winRateStore, matchesStore : matchesStore} = useStore();
 
     const [textValue , setTextValue] = useState<string>('');
 
@@ -40,7 +40,11 @@ const InputTextButton = observer(() => {
     // todo 우측에 검색버튼 달기
     <>
     <input type='text' className={style.Rectangle5} placeholder='소환사명,챔피언…' onChange={inputTextOnChange} value={textValue} />
-    <button onClick={()=>{store.searchUserInfo(textValue)}} >검색</button>
+    <button onClick={async()=>{
+        await store.searchUserInfo(textValue);
+        await winRateStore.mostInfoApi(textValue);
+        await matchesStore.matchesInfoApi(textValue);
+    }} >검색</button>
     </>         
         
       
