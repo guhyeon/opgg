@@ -1,0 +1,34 @@
+.wrapper {
+    display:flex;
+    flex-direction: row;
+    background-color: #1ea1f7;
+    justify-content: flex-end;
+    height:97px;
+}
+.searchWrapper{
+    margin-top:53px;
+    margin-bottom:12px;
+    margin-right:261px;
+    position: relative;
+}
+.searchInput{
+    height:32px;
+    width:260px;
+    font-size:12px;
+    padding: 9px 12px 8px 14px;
+    border-radius: 2px;
+    border-style:none;
+    background-color: #fff;
+}
+
+.searchButton{
+    position: absolute;
+    right:10px;
+    top:1px;
+    height:13px;
+}
+.searchButton img{
+    height:100%;
+    margin-top:9px;
+
+}

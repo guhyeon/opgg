@@ -1,0 +1,9 @@
+.wrapper{
+    /* 화면 기준 1440px */
+    min-width:1440px;
+}
+
+.contentWrapper{
+    background-color: #eaeaea;
+    padding: 0 0 650px;
+}

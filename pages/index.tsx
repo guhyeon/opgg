@@ -7,7 +7,7 @@ import RankComponent from '../components/leagues/RankComponent';
 import MatchesStatusComponent from '../components/matches/MatchesStatusComponent';
 import WinRateComponent from '../components/winRate/WinRateComponent';
 import styles from '../styles/Home.module.css';
-import Layout from './layout';
+import Layout from "../components/common/Layout";
 
 /**
  *
