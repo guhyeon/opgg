@@ -8,6 +8,7 @@ import MatchesStatusComponent from '../components/matches/MatchesStatusComponent
 import WinRateComponent from '../components/winRate/WinRateComponent';
 import styles from '../styles/Home.module.css';
 import Layout from "../components/common/Layout";
+import HR from "../components/common/HR";
 
 /**
  *
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
     <Layout>
       <HeaderContentsComponent />
       <RankComponent />
+      <HR/>
       <WinRateComponent />
       <MatchesStatusComponent />
     </Layout>
