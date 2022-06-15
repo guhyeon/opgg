@@ -2,7 +2,6 @@ import React, { FC, ReactNode } from 'react';
 import RootStore from '../../stores/RootStore';
 import { RootStoreProvider } from './RootStoreProvider';
 
-
 interface AppProviderProps {
   rootStore: RootStore;
   children: ReactNode;
@@ -13,13 +12,9 @@ interface AppProviderProps {
  * @param rootStore
  * @constructor
  */
-const AppProvider: FC<AppProviderProps> = ({ rootStore  , children
-}) => {
-
+const AppProvider: FC<AppProviderProps> = ({ rootStore, children }) => {
   return (
-        <RootStoreProvider rootStore={rootStore}>
-            {children}
-        </RootStoreProvider>
+    <RootStoreProvider rootStore={rootStore}>{children}</RootStoreProvider>
   );
 };
 

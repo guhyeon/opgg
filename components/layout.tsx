@@ -4,38 +4,23 @@ import HeaderContentsComponent from '../components/headerContents/HeaderContents
 import RankComponent from '../components/leagues/RankComponent';
 import MatchesStatusComponent from '../components/matches/MatchesStatusComponent';
 import WinRateComponent from '../components/winRate/WinRateComponent';
-import style from './layout.module.css'
-
+import style from './layout.module.css';
 
 interface LayoutProps {
   children?: ReactNode;
-
 }
-
 
 /**
  * 레이아웃 페이지
- * @param param0 
- * @returns 
+ * @param param0
+ * @returns
  */
-const Layout:FC<LayoutProps> = ({ children}) => {
-
-  
+const Layout: FC<LayoutProps> = ({ children }) => {
   return (
- 
-   
-    <div> 
-  
-    <HeaderComponent/>
-    <HeaderContentsComponent/>
-    <RankComponent/>
-    <WinRateComponent/>
-    <MatchesStatusComponent/>
-    
+    <div className={style.wrapper}>
+      <HeaderComponent />
       {children}
-   
     </div>
-  
   );
 };
 

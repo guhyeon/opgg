@@ -1,22 +1,27 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import HeaderComponent from '../components/header/HeaderComponent'
-import styles from '../styles/Home.module.css'
-import Layout from './layout'
-
-
-
-
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import HeaderComponent from '../components/header/HeaderComponent';
+import HeaderContentsComponent from '../components/headerContents/HeaderContentsComponent';
+import RankComponent from '../components/leagues/RankComponent';
+import MatchesStatusComponent from '../components/matches/MatchesStatusComponent';
+import WinRateComponent from '../components/winRate/WinRateComponent';
+import styles from '../styles/Home.module.css';
+import Layout from './layout';
 
 /**
- * 
+ *
  * @returns 인덱스페이지
  */
 const Home: NextPage = () => {
   return (
-    <Layout/>
-    
+    <Layout>
+      <HeaderContentsComponent />
+      <RankComponent />
+      <WinRateComponent />
+      <MatchesStatusComponent />
+    </Layout>
+
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>
@@ -78,7 +83,7 @@ const Home: NextPage = () => {
     //     </a>
     //   </footer>
     // </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

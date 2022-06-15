@@ -35,13 +35,9 @@ export function RootStoreProvider({
  * Store 초기화
  * @param initialStore. 초기화할 스토어, getServerSideProps(SSR), getStaticProps(SSG)에서 정의.
  */
-function initializeStore(initialStore?: string) {
+function initializeStore() {
   const _store = store ?? new RootStore();
 
-  // 초기화 스토어가 있으면, 녹여준다. (SSR, SSG 인 경우)
-  if (initialStore) {
-    _store.hydrate(JSON.parse(initialStore));
-  }
   // For SSG and SSR always create a new store
   if (typeof window === 'undefined') return _store;
   // Create the store once in the client
@@ -54,6 +50,6 @@ function initializeStore(initialStore?: string) {
  * RootStore 초기화 및 반환.
  * @param initialStore. 초기화할 스토어, getServerSideProps(SSR), getStaticProps(SSG)에서 정의.
  */
-export function useRootStore(initialStore?: string) {
-  return useMemo(() => initializeStore(initialStore), [initialStore]);
+export function useRootStore() {
+  return useMemo(() => initializeStore(), []);
 }
