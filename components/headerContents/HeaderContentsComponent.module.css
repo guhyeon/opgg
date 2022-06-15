@@ -1,0 +1,39 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left:200px;
+}
+.tierWrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top:15px;
+}
+
+.playerInfoWrapper{
+    display: flex;
+}
+
+
+.playerImageWrapper{
+    position: relative;
+}
+.playerImage{
+    margin-left:10px;
+    margin-top:10px;
+    width:100px;
+    height:100px;
+}
+.playerImageBorder{
+    position: absolute;
+    left:0;
+}
+
+.playerLevel {
+    width: 44px;
+    height: 24px;
+    border-style: solid;
+    border-width: 1px;
+    border-image-source: linear-gradient(to bottom, #f6e08f, #ca9a2c 99%);
+    border-image-slice: 1;
+    background-color: #2c3548;
+}

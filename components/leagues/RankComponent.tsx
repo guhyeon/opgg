@@ -9,7 +9,7 @@ const RankComponent = observer(() => {
   const { userBasicInfoStore: store } = useStore();
 
   return (
-    <div>
+    <div >
       {store.summonerDTO?.summoner?.leagues?.map((value, index) => {
         return (
           <Fragment key={index}>

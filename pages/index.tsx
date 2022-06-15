@@ -18,8 +18,8 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <HeaderContentsComponent />
-      <RankComponent />
       <HR/>
+      <RankComponent />
       <WinRateComponent />
       <MatchesStatusComponent />
     </Layout>
